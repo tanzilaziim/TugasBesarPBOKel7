@@ -1,0 +1,107 @@
+### Register
+
+POST http://localhost:8080/api/users
+Accept: application/json
+Content-Type: application/json
+
+{
+  "username": "Destar",
+  "password": "test1234",
+  "name": "suhertal"
+}
+
+### Login
+POST http://localhost:8080/api/auth/login
+Accept: application/json
+Content-Type: application/json
+
+{
+  "username": "Destar",
+  "password": "test1234"
+}
+
+### Get User
+GET http://localhost:8080/api/users/current
+Accept: application/json
+X-API-TOKEN: 205be8a8-a0e0-45b2-95a8-013c5c7417c5
+
+### Update User
+PATCH http://localhost:8080/api/users/current
+Accept: application/json
+Content-Type: application/json
+X-API-TOKEN: 205be8a8-a0e0-45b2-95a8-013c5c7417c5
+
+{
+  "name": "Yana"
+}
+
+### Income Create
+POST http://localhost:8080/api/income
+Accept: application/json
+Content-Type: application/json
+X-API-TOKEN: 205be8a8-a0e0-45b2-95a8-013c5c7417c5
+
+{
+  "balance": "30000.00",
+  "item_name": "Towel Cake",
+  "price": "12000.00",
+  "amount": 2
+}
+
+### Get Income
+GET http://localhost:8080/api/income/a008b5d3-ef4f-4eb3-8b53-35bb9eb02238
+Accept: application/json
+X-API-TOKEN: 205be8a8-a0e0-45b2-95a8-013c5c7417c5
+
+### Update Income
+PUT http://localhost:8080/api/income/a008b5d3-ef4f-4eb3-8b53-35bb9eb02238
+Accept: application/json
+Content-Type: application/json
+X-API-TOKEN: 205be8a8-a0e0-45b2-95a8-013c5c7417c5
+
+{
+  "balance": "40000.00",
+  "item_name":"French Toast",
+  "price": "14000.00",
+  "amount": 5
+}
+
+
+### Remove Income
+DELETE http://localhost:8080/api/income/a008b5d3-ef4f-4eb3-8b53-35bb9eb02238
+Accept: application/json
+X-API-TOKEN: 205be8a8-a0e0-45b2-95a8-013c5c7417c5
+
+### Outcome Create
+POST http://localhost:8080/api/outcome
+Accept: application/json
+Content-Type: application/json
+X-API-TOKEN: 205be8a8-a0e0-45b2-95a8-013c5c7417c5
+
+{
+  "balance" : "100000",
+  "outcome_name" : "Biaya produksi",
+  "outcome_total" : "20000"
+}
+
+### Get Outcome
+GET http://localhost:8080/api/outcome/a69b14f2-e7e1-4b3f-871c-faa37d56d1d1
+Accept: application/json
+X-API-TOKEN: bd3a7c02-240e-470e-9f89-ac0ddd33a84e
+
+### Update Outcome
+PUT http://localhost:8080/api/outcome/a69b14f2-e7e1-4b3f-871c-faa37d56d1d1
+Accept: application/json
+Content-Type: application/json
+X-API-TOKEN: bd3a7c02-240e-470e-9f89-ac0ddd33a84e
+
+{
+  "balance" : "200000",
+  "outcome_name" : "Biaya",
+  "outcome_total" : "30000"
+}
+
+### Remove Outcome
+DELETE http://localhost:8080/api/outcome/a69b14f2-e7e1-4b3f-871c-faa37d56d1d1
+Accept: application/json
+X-API-TOKEN: bd3a7c02-240e-470e-9f89-ac0ddd33a84e
